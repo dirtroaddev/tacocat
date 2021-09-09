@@ -19,7 +19,11 @@ function checkPalindrome(userString) {
         revString += userString[i];
     }
     
-    if(userString.toLowerCase().replace(/\s+/g, '') == revString.toLowerCase().replace(/\s+/g, '')) {
+    if(userString.length == 0) {
+        alert("Please enter a string.");
+        console.log(palindrome.length);
+    }
+    else if(userString.toLowerCase().replace(/\s+/g, '') == revString.toLowerCase().replace(/\s+/g, '')) {
         palindrome = `${userString} is a Palindrome.`;
     } else {
         palindrome = `${userString} is not a Palindrome.`;
@@ -33,9 +37,12 @@ function checkPalindrome(userString) {
 //display the message to the user
 //view function
 function displayString(palindrome) {
+
+    if(palindrome.length > 0) {
     //write to the page
     document.getElementById("msg").innerHTML = palindrome;
 
     //show the alert box
     document.getElementById("alert").classList.remove("invisible");
+    }
 }
