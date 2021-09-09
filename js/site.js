@@ -9,7 +9,7 @@ function getValue() {
 
 }
 
-//reverse the string
+//checks to see if it is a palindrome
 //logic function
 function checkPalindrome(userString) {
     let palindrome = "";
